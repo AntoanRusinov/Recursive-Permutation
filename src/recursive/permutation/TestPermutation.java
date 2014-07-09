@@ -21,17 +21,17 @@ public class TestPermutation {
 
 	}
 
-	public static void permute(String beginningNumber, String endingNumber) {
+	public static void permute(String beginningChar, String endingChar {
 
-		if (endingNumber.length() <= 1) {
-			System.out.println(beginningNumber + endingNumber);
+		if (endingChar.length() <= 1) {
+			System.out.println(beginningChar + endingChar);
 		} else {
-			for (int i = 0; i < endingNumber.length(); i++) {
+			for (int i = 0; i < endingChar.length(); i++) {
 				try {
-					String newString = endingNumber.substring(0, i)
-							+ endingNumber.substring(i + 1);
+					String newString = endingChar.substring(0, i)
+							+ endingChar.substring(i + 1);
 
-					permute(beginningNumber + endingNumber.charAt(i), newString);
+					permute(beginningChar + endingChar.charAt(i), newString);
 
 				} catch (Exception e) {
 					e.printStackTrace();
